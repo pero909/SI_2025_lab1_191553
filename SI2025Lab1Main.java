@@ -1,4 +1,7 @@
+package SI_2025_191553;
+
 import java.util.*;
+import java.util.stream.Collectors;
 
 enum Priority {
     LOW, MEDIUM, HIGH
@@ -87,8 +90,8 @@ class TaskManager {
     public List<Task> filterByCategory(String category) {
 
 
-        return new tasks.stream()
-                .filter(task -> task.getCategory().equals(category))
+        return tasks.stream()
+                .filter((task -> task.getCategory().equals(category)))
                 .collect(Collectors.toList());
     }
 
