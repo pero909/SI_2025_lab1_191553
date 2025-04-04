@@ -1,8 +1,72 @@
-git fetch origin
-git branch -a
-git checkout feature/filter-tasks-by-category
+13–20: Feature Implementation (One per branch)
+
+Feature: Sort Tasks by Name
+----------------------------------------
+Commands:
 git checkout feature/list-tasks-sorted-by-name
+// Implemented method
+git add .
+git commit -m "Implemented sorting by name"
+git push origin feature/list-tasks-sorted-by-name
+Created Pull Request on GitHub.
+
+
+Feature: Remove Task by Name
+----------------------------------------
+Commands:
 git checkout feature/remove-a-task-by-name
-git push origin master
+// Implemented remove logic
+git add .
+git commit -m "Implemented removing a task by name"
+git push origin feature/remove-a-task-by-name
+Created Pull Request on GitHub.
+
+Feature: Filter Tasks by Category
+----------------------------------------
+Commands:
+git checkout feature/filter-tasks-by-category
+// Implemented method in Java
+git add .
+git commit -m "Implemented filtering by category"
+git push origin feature/filter-tasks-by-category
+Created Pull Request on GitHub.
+
+ Merged Two PRs via GitHub:
+- "Merge pull request" clicked for the first two features
+- Automatically moved their Issues to "Done"
+
+========================================
+21–24: Local Merge of Third Feature
+========================================
+
+Switched to master:
+git checkout master
+
+Merged third feature branch:
 git merge origin/feature/remove-a-task-by-name
+
+ No conflicts occurred.
+ Merge strategy used: **ort** (default merge strategy in recent Git versions)
+
+Pushed updated master to remote:
+git push origin master
+
+Pull request for third feature was automatically closed.
+Issue was automatically moved to "Done" in the GitHub Project.
+
+25. Git Logs and Final Commit
+
+Generated log file:
 git log --oneline --graph --all > logs.txt
+
+Created INDEX file (this one).
+
+Committed both:
+git add logs.txt 191553.txt
+git commit -m "Final commit"
+
+26. Final Push
+
+Pushed everything to remote:
+git push origin master
+
