@@ -1,0 +1,8 @@
+git fetch origin
+git branch -a
+git checkout feature/filter-tasks-by-category
+git checkout feature/list-tasks-sorted-by-name
+git checkout feature/remove-a-task-by-name
+git push origin master
+git merge origin/feature/remove-a-task-by-name
+git log --oneline --graph --all > logs.txt
